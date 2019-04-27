@@ -69,3 +69,9 @@ Thank you for your work and inspiring this project!
 
 - https://github.com/rafakato/alpine-graphicsmagick
 - https://github.com/froulet/docker-optipng-alpine
+
+## License
+
+MIT License, see [LICENSE](https://github.com/kuetemeier/docker-image-opt/blob/master/LICENSE) file.
+
+This code also contains work from [Rafael Kato](https://github.com/rafakato) and [Frantz Roulet](https://github.com/froulet).
