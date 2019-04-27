@@ -1,14 +1,13 @@
 FROM alpine:latest
-MAINTAINER Rafael Kato "rafael@kato.io"
+MAINTAINER Jörg Kütemeier "joerg@kuetemeier.de"
 
 ENV PKGNAME=graphicsmagick
 ENV PKGVER=1.3.31
 ENV PKGSOURCE=http://downloads.sourceforge.net/$PKGNAME/$PKGNAME/$PKGVER/GraphicsMagick-$PKGVER.tar.lz
 
-# RUN apk add --update graphicsmagick --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 #
 # Installing graphicsmagick dependencies
-RUN apk add --update g++ \
+RUN apk add --no-cache --update g++ \
                      gcc \
                      make \
                      lzip \
@@ -16,6 +15,7 @@ RUN apk add --update g++ \
                      libjpeg-turbo-dev \
                      libpng-dev \
                      libtool \
+                     optipng \
                      libgomp && \
     wget $PKGSOURCE && \
     lzip -d -c GraphicsMagick-$PKGVER.tar.lz | tar -xvf - && \
