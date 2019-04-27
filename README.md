@@ -1,17 +1,18 @@
-# docker-image-opt
+# kuetemeier/image-opt
 
-## kuetemeier/image-opt
+Docker container to run GraphicsMagick, OptiPNG und MozJPG for website image optimization.
 
 Built on [Alpine Linux](https://alpinelinux.org/).
 
 ## Example
 
     $ docker run kuetemeier/image-opt gm -version
-    GraphicsMagick 1.3.23 2015-11-07 Q16 http://www.GraphicsMagick.org/
-    Copyright (C) 2002-2015 GraphicsMagick Group.
+
+    GraphicsMagick 1.3.31 2018-11-17 Q16 http://www.GraphicsMagick.org/
+    Copyright (C) 2002-2018 GraphicsMagick Group.
     Additional copyrights and licenses apply to this software.
     See http://www.GraphicsMagick.org/www/Copyright.html for details.
-
+    
     Feature Support:
       Native Thread Safe       yes
       Large Files (> 32 bit)   yes
@@ -22,34 +23,35 @@ Built on [Alpine Linux](https://alpinelinux.org/).
       FreeType                 no
       Ghostscript (Library)    no
       JBIG                     no
-      JPEG-2000                yes
+      JPEG-2000                no
       JPEG                     yes
       Little CMS               no
       Loadable Modules         yes
-      OpenMP                   yes (201307)
+      OpenMP                   yes (201511)
       PNG                      yes
-      TIFF                     yes
+      TIFF                     no
       TRIO                     no
       UMEM                     no
       WebP                     no
       WMF                      no
       X11                      no
-      XML                      yes
+      XML                      no
       ZLIB                     yes
-
-    Host type: x86_64-alpine-linux-musl
-
+    
+    Host type: x86_64-pc-linux-musl
+    
     Configured using the command:
-      ./configure  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--prefix=/usr' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--enable-shared' '--disable-static' '--with-modules' '--with-threads' '--with-gs-font-dir=/usr/share/fonts/Type1' '--with-quantum-depth=16' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=gcc' 'CFLAGS=-Os -fomit-frame-pointer' 'LDFLAGS=-Wl,--as-needed' 'CPPFLAGS=-Os -fomit-frame-pointer' 'CXXFLAGS=-Os -fomit-frame-pointer'
-
+      ./configure  '--build=' '--host=' '--prefix=/usr' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info'     '--localstatedir=/var' '--enable-shared' '--disable-static' '--with-modules' '--with-threads' '--with-gs-font-dir=/usr/share/    fonts/Type1' '--with-quantum-depth=16' 'build_alias=' 'host_alias='
+    
     Final Build Parameters:
       CC       = gcc
-      CFLAGS   = -fopenmp -Os -fomit-frame-pointer -Wall
-      CPPFLAGS = -Os -fomit-frame-pointer -I/usr/include/libxml2
-      CXX      = x86_64-alpine-linux-musl-g++
-      CXXFLAGS = -Os -fomit-frame-pointer
-      LDFLAGS  = -Wl,--as-needed
-      LIBS     = -lz -lltdl -lm -lgomp -lpthread
+      CFLAGS   = -fopenmp -g -O2 -Wall
+      CPPFLAGS =
+      CXX      = g++
+      CXXFLAGS =
+      LDFLAGS  =
+      LIBS     = -lz -lltdl -lm -lpthread
+    
 
 Caveats
 -------
