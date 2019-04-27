@@ -1,12 +1,12 @@
-alpine-graphicsmagick
----------------------------------------------------------
+# docker-image-opt
+
+## kuetemeier/image-opt
 
 Built on [Alpine Linux](https://alpinelinux.org/).
 
-Example
--------
+## Example
 
-    $ docker run rafakato/alpine-graphicsmagick gm -version
+    $ docker run kuetemeier/image-opt gm -version
     GraphicsMagick 1.3.23 2015-11-07 Q16 http://www.GraphicsMagick.org/
     Copyright (C) 2002-2015 GraphicsMagick Group.
     Additional copyrights and licenses apply to this software.
@@ -60,3 +60,10 @@ are documented here:
 
 - http://gliderlabs.viewdocs.io/docker-alpine/caveats/
 - https://github.com/gliderlabs/docker-alpine/issues/8
+
+## Thanks to
+
+Thank you for your work and inspiring this project!
+
+- https://github.com/rafakato/alpine-graphicsmagick
+- https://github.com/froulet/docker-optipng-alpine
